@@ -1,0 +1,73 @@
+.dashboard-grid-container {
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.dashboard-grid {
+  width: 100%;
+}
+
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top, width, height;
+}
+
+.react-grid-item.cssTransforms {
+  transition-property: transform, width, height;
+}
+
+.react-grid-item.resizing {
+  transition: none;
+  z-index: 1;
+  will-change: width, height;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 3;
+  will-change: transform;
+}
+
+.react-grid-item.dropping {
+  visibility: hidden;
+}
+
+.react-grid-item > .react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.react-grid-item > .react-resizable-handle::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid var(--text);
+  border-bottom: 2px solid var(--text);
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.react-grid-item:hover > .react-resizable-handle::after {
+  opacity: 0.8;
+}
+
+.react-resizable-handle-se {
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.react-grid-item > .chart-wrapper {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid-container {
+    padding: 20px;
+  }
+}

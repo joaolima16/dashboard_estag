@@ -1,0 +1,102 @@
+.kpi-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.kpi-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--accent-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-value {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-h);
+    line-height: 1;
+    margin: 8px 0;
+}
+
+.card-description {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.card-variation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-variation.positive {
+    color: #10b981;
+}
+
+.card-variation.negative {
+    color: #ef4444;
+}
+
+.card-variation.neutral {
+    color: var(--text);
+}
+
+.variation-value {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.variation-label {
+    color: var(--text);
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .kpi-card {
+        padding: 20px;
+    }
+
+    .card-value {
+        font-size: 36px;
+    }
+
+    .card-title {
+        font-size: 12px;
+    }
+}

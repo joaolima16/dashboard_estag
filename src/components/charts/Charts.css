@@ -1,0 +1,23 @@
+.recharts-wrapper {
+  font-family: var(--sans);
+}
+
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: var(--border);
+}
+
+.recharts-tooltip-wrapper {
+  z-index: 100;
+}
+
+.recharts-default-tooltip {
+  background-color: var(--bg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+}
+
+.recharts-legend-item-text {
+  color: var(--text-h) !important;
+  font-size: 13px;
+}
