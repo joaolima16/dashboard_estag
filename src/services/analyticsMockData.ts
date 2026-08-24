@@ -161,9 +161,9 @@ export interface ProductBreakdown {
 }
 
 const PRODUCT_LABELS: Record<ProductId, string> = {
-  'produto-a': 'Produto A',
-  'produto-b': 'Produto B',
-  'produto-c': 'Produto C',
+  'bank-manager': 'BankManager',
+  'painel-fornecedor': 'Painel Fornecedor',
+  'luna-pay': 'LunaPay',
 }
 
 export const getProductBreakdown = (period: string): ProductBreakdown[] => {

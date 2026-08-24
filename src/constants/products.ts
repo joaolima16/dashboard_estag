@@ -5,14 +5,14 @@ export interface ProductOption {
 
 export const PRODUCTS: ProductOption[] = [
   { value: 'all', label: 'Todos' },
-  { value: 'produto-a', label: 'Produto A' },
-  { value: 'produto-b', label: 'Produto B' },
-  { value: 'produto-c', label: 'Produto C' },
+  { value: 'bank-manager', label: 'BankManager' },
+  { value: 'painel-fornecedor', label: 'Painel Fornecedor' },
+  { value: 'luna-pay', label: 'LunaPay' },
 ]
 
-export type ProductId = 'produto-a' | 'produto-b' | 'produto-c'
+export type ProductId = 'bank-manager' | 'painel-fornecedor' | 'luna-pay'
 
-export const PRODUCT_IDS: ProductId[] = ['produto-a', 'produto-b', 'produto-c']
+export const PRODUCT_IDS: ProductId[] = ['bank-manager', 'painel-fornecedor', 'luna-pay']
 
 export interface PeriodOption {
   value: string

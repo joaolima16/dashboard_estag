@@ -2,7 +2,7 @@
   "generatedAt": "2026-08-24T00:00:00.000Z",
   "source": "mock",
   "products": {
-    "produto-a": [
+    "bank-manager": [
       {
         "date": "2025-08-25",
         "activeUsers": 15,
@@ -2559,7 +2559,7 @@
         "newUsers": 5
       }
     ],
-    "produto-b": [
+    "painel-fornecedor": [
       {
         "date": "2025-08-25",
         "activeUsers": 9,
@@ -5116,7 +5116,7 @@
         "newUsers": 3
       }
     ],
-    "produto-c": [
+    "luna-pay": [
       {
         "date": "2025-08-25",
         "activeUsers": 5,
