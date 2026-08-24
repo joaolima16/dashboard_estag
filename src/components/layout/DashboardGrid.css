@@ -62,8 +62,14 @@
   cursor: se-resize;
 }
 
+.react-grid-item {
+  min-width: 0;
+  min-height: 0;
+}
+
 .react-grid-item > .chart-wrapper {
   height: 100%;
+  width: 100%;
 }
 
 @media (max-width: 768px) {

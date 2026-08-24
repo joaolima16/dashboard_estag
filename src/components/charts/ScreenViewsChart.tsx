@@ -13,10 +13,16 @@ const ScreenViewsChart: React.FC = () => {
   return (
     <ChartWrapper title="Visualizações de Tela" subtitle={periodLabel}>
       <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={data}>
+        <BarChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-          <XAxis dataKey="date" stroke="var(--text)" fontSize={12} />
-          <YAxis stroke="var(--text)" fontSize={12} />
+          <XAxis
+            dataKey="date"
+            stroke="var(--text)"
+            fontSize={12}
+            interval="preserveStartEnd"
+            minTickGap={20}
+          />
+          <YAxis stroke="var(--text)" fontSize={12} width={48} />
           <Tooltip
             contentStyle={{
               backgroundColor: 'var(--bg)',

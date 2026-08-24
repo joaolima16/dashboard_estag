@@ -13,10 +13,16 @@ const ScreenTimeChart: React.FC = () => {
   return (
     <ChartWrapper title="Tempo Médio de Tela" subtitle={periodLabel}>
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data}>
+        <LineChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-          <XAxis dataKey="date" stroke="var(--text)" fontSize={12} />
-          <YAxis stroke="var(--text)" fontSize={12} unit="min" />
+          <XAxis
+            dataKey="date"
+            stroke="var(--text)"
+            fontSize={12}
+            interval="preserveStartEnd"
+            minTickGap={20}
+          />
+          <YAxis stroke="var(--text)" fontSize={12} width={48} unit="min" />
           <Tooltip
             contentStyle={{
               backgroundColor: 'var(--bg)',

@@ -7,8 +7,12 @@
   flex-direction: column;
   gap: 16px;
   height: 100%;
+  min-width: 0;
   box-sizing: border-box;
+  overflow: hidden;
   transition: all 0.2s;
+  container-type: inline-size;
+  container-name: chart;
 }
 
 .chart-wrapper:hover {
@@ -27,12 +31,18 @@
   font-weight: 600;
   color: var(--text-h);
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chart-subtitle {
   font-size: 13px;
   color: var(--text);
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chart-content {
@@ -40,7 +50,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.chart-content > .recharts-responsive-container {
+  min-width: 0;
 }
 
 .chart-loading {
@@ -63,5 +80,31 @@
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@container chart (max-width: 380px) {
+  .chart-wrapper {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .chart-title {
+    font-size: 14px;
+  }
+
+  .chart-subtitle {
+    font-size: 12px;
+  }
+}
+
+@container chart (max-width: 260px) {
+  .chart-wrapper {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .chart-subtitle {
+    display: none;
   }
 }

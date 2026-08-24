@@ -21,3 +21,24 @@
   color: var(--text-h) !important;
   font-size: 13px;
 }
+
+.recharts-pie-label-text {
+  font-size: 12px;
+  fill: var(--text-h);
+}
+
+.recharts-legend-wrapper {
+  overflow: hidden;
+}
+
+@container chart (max-width: 380px) {
+  .recharts-pie-label-text {
+    font-size: 10px;
+  }
+}
+
+@container chart (max-width: 300px) {
+  .recharts-pie-labels {
+    display: none;
+  }
+}

@@ -21,8 +21,8 @@ const CategoryPieChart: React.FC = () => {
             data={data}
             cx="50%"
             cy="50%"
-            innerRadius={60}
-            outerRadius={90}
+            innerRadius="45%"
+            outerRadius="70%"
             paddingAngle={2}
             dataKey="value"
             label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`}
