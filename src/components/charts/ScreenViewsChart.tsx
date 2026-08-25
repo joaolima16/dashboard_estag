@@ -23,7 +23,7 @@ const ScreenViewsChart: React.FC = () => {
             minTickGap={20}
           />
           <YAxis stroke="var(--text)" fontSize={12} width={48} />
-          <Bar dataKey="screenViews" name="Visualizações" fill="#a32638" radius={[8, 8, 0, 0]} />
+          <Bar dataKey="screenViews" name="Visualizações" fill="#2e5c82" radius={[8, 8, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </ChartWrapper>

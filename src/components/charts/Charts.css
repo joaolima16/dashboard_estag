@@ -23,7 +23,7 @@
 }
 
 .recharts-legend-item-text {
-  color: var(--text-h) !important;
+  color: #fff !important;
   font-size: 13px;
 }
 
@@ -34,6 +34,15 @@
 
 .recharts-legend-wrapper {
   overflow: hidden;
+}
+
+.recharts-default-legend {
+  display: inline-flex !important;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--brand-gradient);
 }
 
 @container chart (max-width: 380px) {

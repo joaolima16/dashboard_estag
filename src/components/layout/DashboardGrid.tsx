@@ -51,10 +51,10 @@ const DashboardGrid: React.FC = () => {
           layouts={{ lg: lgLayout, md: lgLayout, sm: smLayout, xs: xsLayout, xxs: xxsLayout }}
           breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
           cols={{ lg: 12, md: 12, sm: 6, xs: 4, xxs: 2 }}
-          rowHeight={80}
+          rowHeight={64}
           dragConfig={{ enabled: true, handle: '.chart-header' }}
           resizeConfig={{ enabled: true }}
-          margin={[24, 24]}
+          margin={[16, 16]}
         >
           <div key="active-users">
             <ActiveUsersChart />

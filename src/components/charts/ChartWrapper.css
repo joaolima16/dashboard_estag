@@ -2,10 +2,10 @@
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 24px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   height: 100%;
   min-width: 0;
   box-sizing: border-box;
@@ -25,29 +25,56 @@
   box-shadow: none;
 }
 
+.chart-wrapper:hover .chart-header {
+  background: var(--brand-gradient);
+}
+
+.chart-wrapper:hover .chart-title,
+.chart-wrapper:hover .chart-subtitle {
+  color: #fff;
+}
+
+.chart-wrapper.no-hover:hover .chart-header {
+  background: none;
+}
+
+.chart-wrapper.no-hover:hover .chart-title {
+  color: var(--text-h);
+}
+
+.chart-wrapper.no-hover:hover .chart-subtitle {
+  color: var(--text);
+}
+
 .chart-header {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  padding: 8px 10px;
+  margin: -8px -10px;
+  border-radius: 8px;
+  transition: background 0.2s;
 }
 
 .chart-title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text-h);
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: color 0.2s;
 }
 
 .chart-subtitle {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text);
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: color 0.2s;
 }
 
 .chart-content {
