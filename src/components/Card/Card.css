@@ -69,7 +69,7 @@
 }
 
 .card-variation.negative {
-    color: #ef4444;
+    color: var(--brand-red);
 }
 
 .card-variation.neutral {
@@ -90,6 +90,8 @@
 @media (max-width: 768px) {
     .kpi-card {
         padding: 20px;
+        align-items: center;
+        text-align: center;
     }
 
     .card-value {
@@ -98,5 +100,13 @@
 
     .card-title {
         font-size: 12px;
+    }
+
+    .card-header {
+        justify-content: center;
+    }
+
+    .card-variation {
+        justify-content: center;
     }
 }

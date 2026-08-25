@@ -12,9 +12,14 @@
 }
 
 .recharts-default-tooltip {
-  background-color: var(--bg) !important;
-  border: 1px solid var(--border) !important;
+  background-color: transparent !important;
+  border: none !important;
   border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+.recharts-bar-rectangle:hover {
+  filter: none !important;
 }
 
 .recharts-legend-item-text {

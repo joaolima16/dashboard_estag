@@ -16,8 +16,8 @@ const ActiveUsersChart: React.FC = () => {
         <AreaChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
           <defs>
             <linearGradient id="colorActiveUsers" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#667eea" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#667eea" stopOpacity={0.1} />
+              <stop offset="5%" stopColor="#2e5c82" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#2e5c82" stopOpacity={0.1} />
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
@@ -40,7 +40,7 @@ const ActiveUsersChart: React.FC = () => {
             type="monotone"
             dataKey="activeUsers"
             name="Usuários ativos"
-            stroke="#667eea"
+            stroke="#2e5c82"
             strokeWidth={2}
             fillOpacity={1}
             fill="url(#colorActiveUsers)"

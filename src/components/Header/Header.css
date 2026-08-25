@@ -12,7 +12,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--brand-gradient);
     opacity: 0.05;
     z-index: 0;
 }
@@ -47,7 +47,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 12px rgba(46, 92, 130, 0.3);
 }
 
 .header-text {
@@ -62,7 +62,7 @@
     color: var(--text-h);
     margin: 0;
     letter-spacing: -0.5px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--brand-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -93,7 +93,7 @@
 }
 
 .filter-group:hover .filter-label {
-    color: #667eea;
+    color: var(--brand-blue-light);
 }
 
 .filter-label {
@@ -118,7 +118,7 @@
     transition: all 0.25s ease;
     min-width: 170px;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23667eea' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232e5c82' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 14px center;
     background-size: 12px;
@@ -126,16 +126,16 @@
 
 .period-selector:hover,
 .product-selector:hover {
-    border-color: #667eea;
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+    border-color: var(--brand-blue-light);
+    box-shadow: 0 4px 12px rgba(46, 92, 130, 0.15);
     transform: translateY(-1px);
 }
 
 .period-selector:focus,
 .product-selector:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+    border-color: var(--brand-blue-light);
+    box-shadow: 0 0 0 3px rgba(46, 92, 130, 0.15);
 }
 
 .period-selector:active,
@@ -164,20 +164,20 @@
 }
 
 .action-button:hover {
-    border-color: #667eea;
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+    border-color: var(--brand-blue-light);
+    box-shadow: 0 2px 8px rgba(46, 92, 130, 0.15);
     transform: translateY(-1px);
 }
 
 .action-button.primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--brand-gradient);
     color: white;
     border: none;
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 12px rgba(46, 92, 130, 0.3);
 }
 
 .action-button.primary:hover {
-    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 6px 16px rgba(46, 92, 130, 0.4);
     transform: translateY(-2px);
 }
 

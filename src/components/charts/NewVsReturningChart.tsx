@@ -16,12 +16,12 @@ const NewVsReturningChart: React.FC = () => {
         <AreaChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
           <defs>
             <linearGradient id="colorNewUsers" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#4facfe" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#4facfe" stopOpacity={0.1} />
+              <stop offset="5%" stopColor="#2e5c82" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#2e5c82" stopOpacity={0.1} />
             </linearGradient>
             <linearGradient id="colorReturningUsers" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#764ba2" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#764ba2" stopOpacity={0.1} />
+              <stop offset="5%" stopColor="#0f1e3d" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#0f1e3d" stopOpacity={0.1} />
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
@@ -46,7 +46,7 @@ const NewVsReturningChart: React.FC = () => {
             dataKey="newUsers"
             name="Novos usuários"
             stackId="1"
-            stroke="#4facfe"
+            stroke="#2e5c82"
             strokeWidth={2}
             fillOpacity={1}
             fill="url(#colorNewUsers)"
@@ -56,7 +56,7 @@ const NewVsReturningChart: React.FC = () => {
             dataKey="returningUsers"
             name="Usuários retornando"
             stackId="1"
-            stroke="#764ba2"
+            stroke="#0f1e3d"
             strokeWidth={2}
             fillOpacity={1}
             fill="url(#colorReturningUsers)"

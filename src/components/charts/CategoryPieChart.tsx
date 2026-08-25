@@ -4,7 +4,7 @@ import { useFiltersStore } from '../../store/filtersStore'
 import { getProductBreakdown } from '../../services/analyticsMockData'
 import './Charts.css'
 
-const COLORS = ['#667eea', '#764ba2', '#f093fb']
+const COLORS = ['#2e5c82', '#0f1e3d', '#a32638']
 
 const CategoryPieChart: React.FC = () => {
   const { period } = useFiltersStore()

@@ -1,4 +1,4 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts'
 import ChartWrapper from './ChartWrapper'
 import { useFiltersStore } from '../../store/filtersStore'
 import { getAnalyticsSeries } from '../../services/analyticsMockData'
@@ -11,7 +11,7 @@ const ScreenViewsChart: React.FC = () => {
   const periodLabel = PERIODS.find((p) => p.value === period)?.label ?? ''
 
   return (
-    <ChartWrapper title="Visualizações de Tela" subtitle={periodLabel}>
+    <ChartWrapper title="Visualizações de Tela" subtitle={periodLabel} className="no-hover">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
@@ -23,14 +23,7 @@ const ScreenViewsChart: React.FC = () => {
             minTickGap={20}
           />
           <YAxis stroke="var(--text)" fontSize={12} width={48} />
-          <Tooltip
-            contentStyle={{
-              backgroundColor: 'var(--bg)',
-              border: '1px solid var(--border)',
-              borderRadius: '8px',
-            }}
-          />
-          <Bar dataKey="screenViews" name="Visualizações" fill="#4facfe" radius={[8, 8, 0, 0]} />
+          <Bar dataKey="screenViews" name="Visualizações" fill="#a32638" radius={[8, 8, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </ChartWrapper>

@@ -1,4 +1,4 @@
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
 import ChartWrapper from './ChartWrapper'
 import { useFiltersStore } from '../../store/filtersStore'
 import { getAnalyticsSeries } from '../../services/analyticsMockData'
@@ -13,16 +13,31 @@ const ScreenTimeChart: React.FC = () => {
   return (
     <ChartWrapper title="Tempo Médio de Tela" subtitle={periodLabel}>
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
+        <AreaChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
+          <defs>
+            <linearGradient id="colorScreenTime" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#0f1e3d" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#0f1e3d" stopOpacity={0.1} />
+            </linearGradient>
+          </defs>
           <XAxis
             dataKey="date"
             stroke="var(--text)"
             fontSize={12}
             interval="preserveStartEnd"
             minTickGap={20}
+            axisLine={false}
+            tickLine={false}
           />
-          <YAxis stroke="var(--text)" fontSize={12} width={48} unit="min" />
+          <YAxis
+            stroke="var(--text)"
+            fontSize={12}
+            width={40}
+            unit="min"
+            tickCount={4}
+            axisLine={false}
+            tickLine={false}
+          />
           <Tooltip
             contentStyle={{
               backgroundColor: 'var(--bg)',
@@ -31,15 +46,16 @@ const ScreenTimeChart: React.FC = () => {
             }}
             formatter={(value) => [`${value} min`, 'Tempo médio']}
           />
-          <Line
-            type="monotone"
+          <Area
+            type="natural"
             dataKey="avgScreenTimeMin"
             name="Tempo médio (min)"
-            stroke="#764ba2"
+            stroke="#0f1e3d"
             strokeWidth={2}
-            dot={false}
+            fillOpacity={1}
+            fill="url(#colorScreenTime)"
           />
-        </LineChart>
+        </AreaChart>
       </ResponsiveContainer>
     </ChartWrapper>
   )

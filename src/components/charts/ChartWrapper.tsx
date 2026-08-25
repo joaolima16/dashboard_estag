@@ -5,11 +5,12 @@ interface ChartWrapperProps {
   subtitle?: string
   children: React.ReactNode
   loading?: boolean
+  className?: string
 }
 
-const ChartWrapper: React.FC<ChartWrapperProps> = ({ title, subtitle, children, loading }) => {
+const ChartWrapper: React.FC<ChartWrapperProps> = ({ title, subtitle, children, loading, className }) => {
   return (
-    <div className="chart-wrapper">
+    <div className={`chart-wrapper ${className || ''}`}>
       <div className="chart-header">
         <h3 className="chart-title">{title}</h3>
         {subtitle && <p className="chart-subtitle">{subtitle}</p>}

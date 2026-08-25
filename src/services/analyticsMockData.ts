@@ -6,6 +6,7 @@ export interface AnalyticsDataPoint {
   activeUsers: number
   avgScreenTimeMin: number
   screenViews: number
+  newUsers: number
 }
 
 export interface AnalyticsSummary {
@@ -15,6 +16,8 @@ export interface AnalyticsSummary {
   avgScreenTimeVariation: number
   screenViews: number
   screenViewsVariation: number
+  newUsers: number
+  newUsersVariation: number
 }
 
 export interface NewVsReturningPoint {
@@ -52,6 +55,7 @@ const getLastNDays = (points: RawDataPoint[], days: number): AnalyticsDataPoint[
     activeUsers: point.activeUsers,
     avgScreenTimeMin: point.avgScreenTimeMin,
     screenViews: point.screenViews,
+    newUsers: point.newUsers,
   }))
 }
 
@@ -66,12 +70,14 @@ const generateAllProductsSeries = (days: number): AnalyticsDataPoint[] => {
     const avgScreenTimeMin = Number(
       (perProduct.reduce((sum, series) => sum + series[idx].avgScreenTimeMin, 0) / perProduct.length).toFixed(1)
     )
+    const newUsers = perProduct.reduce((sum, series) => sum + series[idx].newUsers, 0)
 
     merged.push({
       date: formatDate(perProduct[0][idx].date),
       activeUsers,
       avgScreenTimeMin,
       screenViews,
+      newUsers,
     })
   }
 
@@ -112,6 +118,9 @@ export const getAnalyticsSummary = (product: string, period: string): AnalyticsS
   const screenViews = Math.round(sum(recent, 'screenViews'))
   const screenViewsPrev = Math.round(sum(previous, 'screenViews'))
 
+  const newUsers = Math.round(avg(recent, 'newUsers'))
+  const newUsersPrev = Math.round(avg(previous, 'newUsers'))
+
   return {
     activeUsers,
     activeUsersVariation: variation(activeUsers, activeUsersPrev),
@@ -119,6 +128,8 @@ export const getAnalyticsSummary = (product: string, period: string): AnalyticsS
     avgScreenTimeVariation: variation(avgScreenTimeMin, avgScreenTimePrev),
     screenViews,
     screenViewsVariation: variation(screenViews, screenViewsPrev),
+    newUsers,
+    newUsersVariation: variation(newUsers, newUsersPrev),
   }
 }
 

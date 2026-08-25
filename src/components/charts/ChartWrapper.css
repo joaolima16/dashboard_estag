@@ -20,6 +20,11 @@
   box-shadow: var(--shadow);
 }
 
+.chart-wrapper.no-hover:hover {
+  border-color: var(--border);
+  box-shadow: none;
+}
+
 .chart-header {
   display: flex;
   flex-direction: column;
