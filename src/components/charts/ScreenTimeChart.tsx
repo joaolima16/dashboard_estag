@@ -43,14 +43,16 @@ const ScreenTimeChart: React.FC = () => {
               backgroundColor: 'var(--bg)',
               border: '1px solid var(--border)',
               borderRadius: '8px',
+              color: '#fff',
             }}
+            labelStyle={{ color: '#fff' }}
             formatter={(value) => [`${value} min`, 'Tempo médio']}
           />
           <Area
             type="natural"
             dataKey="avgScreenTimeMin"
             name="Tempo médio (min)"
-            stroke="#0f1e3d"
+            stroke="#fff"
             strokeWidth={2}
             fillOpacity={1}
             fill="url(#colorScreenTime)"

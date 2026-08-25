@@ -38,6 +38,7 @@ const NewVsReturningChart: React.FC = () => {
               backgroundColor: 'var(--bg)',
               border: '1px solid var(--border)',
               borderRadius: '8px',
+              color: '#fff',
             }}
           />
           <Legend wrapperStyle={{ fontSize: 12 }} />
@@ -46,7 +47,7 @@ const NewVsReturningChart: React.FC = () => {
             dataKey="newUsers"
             name="Novos usuários"
             stackId="1"
-            stroke="#2e5c82"
+            stroke="#cdd2d6"
             strokeWidth={2}
             fillOpacity={1}
             fill="url(#colorNewUsers)"
@@ -56,7 +57,7 @@ const NewVsReturningChart: React.FC = () => {
             dataKey="returningUsers"
             name="Usuários retornando"
             stackId="1"
-            stroke="#0f1e3d"
+            stroke="#bec6d6"
             strokeWidth={2}
             fillOpacity={1}
             fill="url(#colorReturningUsers)"

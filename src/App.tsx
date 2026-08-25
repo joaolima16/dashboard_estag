@@ -20,6 +20,15 @@ function App() {
       <main className="dashboard-main">
         {view === 'dashboard' ? (
           <>
+            <div className="dashboard-title-wrapper">
+              <h2 className="dashboard-title">
+                <span className="dashboard-title-icon" aria-hidden="true">📊</span>
+                Dashboard de Analytics
+              </h2>
+              <p className="dashboard-title-subtitle">
+                Acompanhe as métricas e o desempenho em tempo real
+              </p>
+            </div>
             <div className="kpi-grid">
               <Card
                 title="Usuários Ativos"

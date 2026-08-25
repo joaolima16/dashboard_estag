@@ -12,6 +12,46 @@
   box-sizing: border-box;
 }
 
+.dashboard-title-wrapper {
+  margin: 0 0 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.dashboard-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--text-h);
+}
+
+.dashboard-title-icon {
+  font-size: 1.75rem;
+  -webkit-text-fill-color: initial;
+}
+
+.dashboard-title-subtitle {
+  margin: 6px 0 0;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 1.5rem;
+  }
+}
+
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

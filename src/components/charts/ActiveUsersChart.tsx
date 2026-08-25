@@ -28,13 +28,15 @@ const ActiveUsersChart: React.FC = () => {
             interval="preserveStartEnd"
             minTickGap={20}
           />
-          <YAxis stroke="var(--text)" fontSize={12} width={40} />
+        <YAxis stroke="var(--text)" fontSize={12} width={40} />
           <Tooltip
             contentStyle={{
               backgroundColor: 'var(--bg)',
               border: '1px solid var(--border)',
               borderRadius: '8px',
+              color: '#fff',
             }}
+            labelStyle={{ color: '#fff' }}
           />
           <Area
             type="monotone"

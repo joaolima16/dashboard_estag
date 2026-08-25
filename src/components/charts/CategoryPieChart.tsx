@@ -36,8 +36,10 @@ const CategoryPieChart: React.FC = () => {
             contentStyle={{ 
               backgroundColor: 'var(--bg)', 
               border: '1px solid var(--border)',
-              borderRadius: '8px'
+              borderRadius: '8px',
+              color: '#fff'
             }}
+            labelStyle={{ color: '#fff' }}
           />
           <Legend />
         </PieChart>

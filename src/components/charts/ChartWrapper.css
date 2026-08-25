@@ -25,9 +25,6 @@
   box-shadow: none;
 }
 
-.chart-wrapper:hover .chart-header {
-  background: var(--brand-gradient);
-}
 
 .chart-wrapper:hover .chart-title,
 .chart-wrapper:hover .chart-subtitle {
@@ -88,7 +85,7 @@
   overflow: hidden;
 }
 
-.chart-content > .recharts-responsive-container {
+.chart-content>.recharts-responsive-container {
   min-width: 0;
 }
 
